@@ -31,6 +31,7 @@ func InitDatabase() {
 	CREATE TABLE IF NOT EXISTS projects (
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		name TEXT NOT NULL,
+		field TEXT NOT NULL,
 		description TEXT,
 		deadline TEXT NOT NULL,
 		experience TEXT NOT NULL

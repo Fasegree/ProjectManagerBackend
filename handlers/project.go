@@ -23,6 +23,7 @@ func InitProjects() {
 	projects[1] = models.Project{
 		ID:          1,
 		Name:        "Project Alpha",
+		Field:       "design",
 		Description: "A cutting-edge AI project",
 		Deadline:    "31.12.2025",
 		Experience:  "5+ years",
@@ -30,6 +31,7 @@ func InitProjects() {
 	projects[2] = models.Project{
 		ID:          2,
 		Name:        "Project Beta",
+		Field:       "development",
 		Description: "Next-gen cloud platform",
 		Deadline:    "30.06.2025",
 		Experience:  "3+ years",
@@ -37,6 +39,7 @@ func InitProjects() {
 	projects[3] = models.Project{
 		ID:          3,
 		Name:        "Project Gamma",
+		Field:       "marketing",
 		Description: "Blockchain-based fintech solution",
 		Deadline:    "15.09.2025",
 		Experience:  "4+ years",
@@ -156,6 +159,7 @@ func EditProject(c *gin.Context) {
 
 	if existingProject, exists := projects[id]; exists {
 		existingProject.Name = project.Name
+		existingProject.Field = project.Field
 		existingProject.Description = project.Description
 		existingProject.Deadline = project.Deadline
 		existingProject.Experience = project.Experience
